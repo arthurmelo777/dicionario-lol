@@ -17,8 +17,6 @@ class LOLServer(object):
             return "Rota não encontrada"
 
 def main():
-    Pyro4.config.NS_HOST = 'localhost'
-    Pyro4.config.NS_PORT = 9090
     Pyro4.Daemon.serveSimple(
         {
             LOLServer: "lol_server"

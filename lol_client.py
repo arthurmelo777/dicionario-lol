@@ -7,7 +7,10 @@ def main():
             if role == 'exit':
                 break
             champions = server.get_champions_by_role(role)
-            print(f"Campeões da rota {role}: {', '.join(champions)}")
+            if champions != "Rota não encontrada":
+                print(f"Campeões da rota {role}: {', '.join(champions)}")
+            else:
+                print(champions)
 
 if __name__ == "__main__":
     main()
