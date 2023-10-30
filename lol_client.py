@@ -1,7 +1,7 @@
 import Pyro4
 
 def main():
-    with Pyro4.Proxy("PYRONAME:lol_server") as server:
+    with Pyro4.Proxy("PYRO:lol_server@localhost:9090") as server:
         while True:
             role = input("Digite uma rota (top, jungle, mid, adc, sup) ou 'exit' para sair: ")
             if role == 'exit':
